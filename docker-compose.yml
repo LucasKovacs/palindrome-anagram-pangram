@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+    jadu-checker:
+      container_name: jadu-checker
+      build: .
+      ports:
+        - "8080:80"
+      expose:
+      - "9000"
+      volumes:
+        - ./app:/var/www/site
+      networks:
+        - jadu-network
+
+networks:
+    jadu-network:
+        driver: bridge
