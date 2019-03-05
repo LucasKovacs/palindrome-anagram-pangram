@@ -12,9 +12,6 @@ RUN npm install -g istanbul
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN export TERM=xterm
 
-#COPY ./setup.sh /root/setup.sh
-#RUN /root/setup.sh
-
 ENV APACHE_LOG_DIR /var/log/apache2
 ENV APACHE_LOCK_DIR /var/lock/apache2
 ENV APACHE_PID_FILE /var/run/apache2.pid
