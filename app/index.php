@@ -1,18 +1,42 @@
 <?php
 
+/**
+ * Index file
+ *
+ * PHP Version 7.1+
+ *
+ * @category File
+ * @package  app
+ * @author   Lucas Kovács <lucas.kovacs@gmail.com>
+ * @license  
+ * @link     
+ * @version  1.0.0
+ */
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 require_once 'lib/Checker.php';
 
 /**
- * Pangrams, anagrams and palindromes
- * 
- * Implement each of the functions of the Checker class. 
- * Aim to spend about 10 minutes on each function. 
+ * Index class
+ *
+ * PHP Version 7.1+
+ *
+ * @category Class
+ * @package  app
+ * @author   Lucas Kovács <lucas.kovacs@gmail.com>
+ * @license  
+ * @link     
+ * @version  1.0.0
  */
 class Index
 {
+    /**
+     * Constructor
+     * 
+     * @return void
+     */
     public function __construct()
     {
     }
