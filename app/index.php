@@ -133,7 +133,7 @@ $index = new Index();
 <h2>Palindrome</h2>
 <?php 
     $index->checkPalindrome(
-        ['anna', 'Bark', 'test', '1221', 'level', 'noon', 'hello']
+        ['anna', 'Bark', 'test', '1221', 'level', 'noon', 'hello', '']
     );
 ?>
 
@@ -145,7 +145,8 @@ $index = new Index();
             ['word' => 'coalface', 'comparison' => 'dark elf'],
             ['word' => 'who', 'comparison' => 'how'],
             ['word' => 'test', 'comparison' => 'rest'],
-            ['word' => 'cafe', 'comparison' => 'face']
+            ['word' => 'cafe', 'comparison' => 'face'],
+            ['word' => '', 'comparison' => '']
         ]
     );
 ?>
@@ -155,7 +156,8 @@ $index = new Index();
     $index->checkPangram(
         [
             'The quick brown fox jumps over the lazy dog',
-            'The British Broadcasting Corporation (BBC) is a British public service broadcaster.'
+            'The British Broadcasting Corporation (BBC) is a British public service broadcaster.',
+            ''
         ]
     );
 ?>

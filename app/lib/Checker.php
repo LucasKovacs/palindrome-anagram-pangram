@@ -16,9 +16,21 @@ class Checker
      */
     public static function isPalindrome($word)
     {
-        $filter_word = trim(strtolower($word));
+        try {
 
-        return (strtolower($filter_word) == strrev($filter_word));
+            if (!is_string($word) || empty($word)) {
+
+                throw new Exception('not a string, or empty');
+            }
+
+            $filter_word = trim(strtolower($word));
+
+            return (strtolower($filter_word) == strrev($filter_word));
+
+        } catch(Exception $e) {
+
+            return false;
+        }
     }
     
     /**
@@ -32,16 +44,28 @@ class Checker
      */
     public static function isAnagram($word, $comparison)
     {
-        $filter_word = strtr(trim(strtolower($word)), [' ' => '']);
-        $filter_comparison = strtr(trim(strtolower($comparison)), [' ' => '']);
+        try {
 
-        $first_string = str_split($filter_word);
-        $second_string = str_split($filter_comparison);
+            if (!is_string($word) || empty($word) || !is_string($comparison) || empty($comparison)) {
 
-        sort($first_string);
-        sort($second_string);
+                throw new Exception('not a string, or empty');
+            }
 
-        return (join('',$first_string) == join('',$second_string));
+            $filter_word = strtr(trim(strtolower($word)), [' ' => '']);
+            $filter_comparison = strtr(trim(strtolower($comparison)), [' ' => '']);
+    
+            $first_string = str_split($filter_word);
+            $second_string = str_split($filter_comparison);
+    
+            sort($first_string);
+            sort($second_string);
+    
+            return (join('',$first_string) == join('',$second_string));
+
+        } catch(Exception $e) {
+
+            return false;
+        }
     }
 
     /**
@@ -53,15 +77,27 @@ class Checker
      */    
     public static function isPangram($phrase)
     {
-        $filter_phrase = strtr(trim(strtolower($phrase)), [' ' => '']);
+        try {
 
-        $english_dictionary = 'abcdefghijklmnopqrstuvwxyz';
-        $letters = str_split($filter_phrase);
-        
-        sort($letters);
+            if (!is_string($phrase)) {
 
-        $unique_letters = array_unique($letters);
+                throw new Exception('not a string');
+            }
 
-        return (join('', $unique_letters) == $english_dictionary);
+            $filter_phrase = strtr(trim(strtolower($phrase)), [' ' => '']);
+
+            $english_dictionary = 'abcdefghijklmnopqrstuvwxyz';
+            $letters = str_split($filter_phrase);
+            
+            sort($letters);
+    
+            $unique_letters = array_unique($letters);
+    
+            return (join('', $unique_letters) == $english_dictionary);
+
+        } catch(Exception $e) {
+
+            return false;
+        }
     }
 }
