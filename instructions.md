@@ -3,6 +3,7 @@
 **Installation Requirements**
 
  1. Docker
+ 2. PHPUnit v7 (PHP 7.1 support)
 
 **Installation**
 
@@ -16,6 +17,10 @@
 	 3. Line 135 for Palindrome
 	 4. Lines 143 to 147 for Anagram
 	 5. Lines 156 to 157 for Pangram
+
+**Run the tests**
+ 1. On your terminal go to /app/tests/phpunit
+ 2. Once there run phpunit unit/lib/Checker-Test.php
 
 ## File Structure
 

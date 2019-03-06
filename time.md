@@ -1,6 +1,6 @@
 ## Time
 **Total time spent**
-About 2 hours 15 minutes
+About 3 hours 15 minutes
 
 **Time spent on**
 
@@ -14,8 +14,9 @@ About 2 hours 15 minutes
  - index.php coding: 45m
 	 - I had to think a little bit about the structure that I wanted
 	 - Last part was the HTML, and fixing a little bit the format
- - Testing: 25m
+ - Testing: 1h 25m
 	 - Was done along the coding
+	 - Then added unit testing
  - Documenting
 	 - Method Descriptions: 5m
 	 - .md files: 5m
